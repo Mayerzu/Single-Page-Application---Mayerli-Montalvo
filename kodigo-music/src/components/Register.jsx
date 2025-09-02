@@ -1,19 +1,27 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
-const Login = () => {
+const Register = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    alert('Formulario válido! (Simulación de login)');
-    navigate('/');
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const existingUser = users.find(u => u.email === data.email);
+    if (existingUser) {
+      alert('Email ya registrado. Inicia sesión.');
+    } else {
+      users.push(data);
+      localStorage.setItem('users', JSON.stringify(users));
+      alert('Registro exitoso! Inicia sesión.');
+      navigate('/');
+    }
   };
 
   return (
-    <div className="login">
-      <h2>Inicia Sesión</h2>
+    <div className="register">
+      <h2>Regístrate</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           type="email"
@@ -39,10 +47,11 @@ const Login = () => {
           })}
         />
         {errors.password && <p className="error">{errors.password.message}</p>}
-        <button type="submit">Login</button>
+        <button type="submit">Registrarse</button>
       </form>
+      <p className="register-link">¿Ya tienes cuenta? <Link to="/">Login</Link></p>
     </div>
   );
 };
 
-export default Login;
+export default Register;
