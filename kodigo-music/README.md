@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+Kodigo Music
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+App React para login/registro, explorar canciones (pop, rock, salsa) y gestionar perfil con tema claro/oscuro.
 
-## Available Scripts
+Despliegue
 
-In the project directory, you can run:
+URL: https://single-page-application-mayerli-mon-lovat.vercel.app
 
-### `npm start`
+Características
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Login/Registro: Validación con react-hook-form, datos en localStorage.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Home: 10 canciones reales por categoría con filtro.
 
-### `npm test`
+Perfil: Email, ícono Font Awesome, cambio tema, logout.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Diseño: Moderno, sin navbar en login/registro.
 
-### `npm run build`
+Tech: React, react-router-dom, react-hook-form, Font Awesome, Vercel.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Instalación Local
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clonar: git clone https://github.com/Mayerzu/Single-Page-Application---Mayerli-Montalvo.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Navega: cd Single-Page-Application---Mayerli-Montalvo/kodigo-music
 
-### `npm run eject`
+Instala: npm install && npm install @fortawesome/fontawesome-free
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Ejecuta: npm run dev (http://localhost:3000)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Despliegue Vercel
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Conecta repo GitHub en Vercel.
+Configura: Root Directory: kodigo-music, Framework: Create React App.
+Despliega: Accede a la URL.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Notas
 
-## Learn More
+Instala @fortawesome/fontawesome-free para el ícono de perfil.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Usa localStorage (sin backend).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Si hay errores: Remove-Item -Recurse -Force node_modules; Remove-Item -Force package-lock.json; npm install
